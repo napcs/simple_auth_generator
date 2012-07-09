@@ -1,0 +1,2 @@
+module SimpleAuth
+end

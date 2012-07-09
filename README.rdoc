@@ -1,0 +1,52 @@
+= SimpleAuthGenerator
+
+This is a simple generator for authentication and password recovery
+for Rails 3.1 and above.
+
+== Why??
+
+While some may scoff at the idea of
+doing authentication in an old-school generated way, we've been burned too
+many times using authentication methods like plugins, gems, and engines that
+went out of date and made upgrading too painful.
+
+We figured that if we have to end up maintaining the authentication code
+ourselves anyway, we might as well generate it as files we can maintain
+instead of tucking the bits away in a module somewhere. And
+nothing prevents you from taking all the generated code and
+tucking it away, or using this generator as the basis for your
+own system.
+
+== Features
+
+* Passwords stored in the database are encrypted with bcrypt
+* Password reset done with a link sent to an email
+* Account verification via email
+* Generated specs
+* Emails are sent in the controllers
+* The generator itself has tests
+* Influenced heavily by restful_authentication and AuthLogic
+
+== Usage
+
+Add it to your Gemfile under the development group
+
+   gem 'simple_auth_generator', :group => :development
+
+then
+
+   bundle
+   bundle exec rails g simple_auth
+
+It generates all the stuff you need.  You can remove the gem from your Gemfile 
+and rebundle again if you like, since nothing relies on this generator after
+you use it.
+
+== Options
+
+You can specify <tt>--skip-migration</tt> and <tt>--skip-specs</tt>. You can
+also call the model something different.
+
+= Licence
+
+See MIT-LICENSE.

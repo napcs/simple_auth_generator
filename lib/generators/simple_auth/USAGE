@@ -1,0 +1,19 @@
+Description:
+    Creates a generated set of controllers and a model to support logging in.
+
+Example:
+    rails generate simple_auth:setup user
+
+    This will create:
+        app/models/user.rb
+
+    and many other files, including specs and a migration.
+    
+    Options:
+      --skip-specs 
+        Doesn't generate specs for the generated code
+    
+      --skip-migration
+        Doesn't add a migration. If you use this you'll want to add
+        username, email, password, and password_digest fields to your database.
+        

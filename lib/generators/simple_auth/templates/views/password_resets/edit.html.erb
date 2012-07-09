@@ -1,0 +1,16 @@
+<h2>Change your Password</h2>
+
+<%%= form_for @<%= model_name %>, :url => password_reset_url(:token => @<%=model_name%>.password_reset_token), :method => "put" do |f| %>
+  <div class="row">
+    <%%= f.label :password %>
+    <%%= f.password_field :password %>
+  </div>
+  <div class="row">
+    <%%= f.label :password_confirmation %>
+    <%%= f.password_field :password_confirmation %>
+  </div>
+  <div class="row">
+    <%%= f.submit "Change Password"%>
+  </div>
+  
+<%% end %>
