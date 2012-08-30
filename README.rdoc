@@ -1,7 +1,7 @@
 = SimpleAuthGenerator
 
 This is a simple generator for authentication and password recovery
-for Rails 3.1 and above.
+for Rails 3.1 and above.  It's also not quite ready for primetime yet!
 
 == Why??
 
